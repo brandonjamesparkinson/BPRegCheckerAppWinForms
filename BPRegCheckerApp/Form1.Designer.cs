@@ -35,12 +35,14 @@ namespace BPRegCheckerApp
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblVehicleColour = new System.Windows.Forms.Label();
             this.lblTaxStatus = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMOTExpiry = new System.Windows.Forms.Label();
             this.lblResultMake = new System.Windows.Forms.Label();
             this.lblResultColour = new System.Windows.Forms.Label();
             this.lblResultTaxStatus = new System.Windows.Forms.Label();
             this.lblMOTExpiryDate = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblEngineSize = new System.Windows.Forms.Label();
+            this.lblResultEngineSize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEnterReg
@@ -96,14 +98,14 @@ namespace BPRegCheckerApp
             this.lblTaxStatus.TabIndex = 4;
             this.lblTaxStatus.Text = "Vehicle Tax Status:";
             // 
-            // label4
+            // lblMOTExpiry
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Vehicle MOT Expiry Date:";
+            this.lblMOTExpiry.AutoSize = true;
+            this.lblMOTExpiry.Location = new System.Drawing.Point(12, 101);
+            this.lblMOTExpiry.Name = "lblMOTExpiry";
+            this.lblMOTExpiry.Size = new System.Drawing.Size(129, 13);
+            this.lblMOTExpiry.TabIndex = 5;
+            this.lblMOTExpiry.Text = "Vehicle MOT Expiry Date:";
             // 
             // lblResultMake
             // 
@@ -151,17 +153,37 @@ namespace BPRegCheckerApp
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // lblEngineSize
+            // 
+            this.lblEngineSize.AutoSize = true;
+            this.lblEngineSize.Location = new System.Drawing.Point(31, 114);
+            this.lblEngineSize.Name = "lblEngineSize";
+            this.lblEngineSize.Size = new System.Drawing.Size(110, 13);
+            this.lblEngineSize.TabIndex = 11;
+            this.lblEngineSize.Text = "Engine Capacity (CC):";
+            // 
+            // lblResultEngineSize
+            // 
+            this.lblResultEngineSize.AutoSize = true;
+            this.lblResultEngineSize.Location = new System.Drawing.Point(147, 114);
+            this.lblResultEngineSize.Name = "lblResultEngineSize";
+            this.lblResultEngineSize.Size = new System.Drawing.Size(16, 13);
+            this.lblResultEngineSize.TabIndex = 12;
+            this.lblResultEngineSize.Text = "---";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 142);
+            this.ClientSize = new System.Drawing.Size(382, 152);
+            this.Controls.Add(this.lblResultEngineSize);
+            this.Controls.Add(this.lblEngineSize);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblMOTExpiryDate);
             this.Controls.Add(this.lblResultTaxStatus);
             this.Controls.Add(this.lblResultColour);
             this.Controls.Add(this.lblResultMake);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblMOTExpiry);
             this.Controls.Add(this.lblTaxStatus);
             this.Controls.Add(this.lblVehicleColour);
             this.Controls.Add(this.btnSubmit);
@@ -183,12 +205,14 @@ namespace BPRegCheckerApp
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblVehicleColour;
         private System.Windows.Forms.Label lblTaxStatus;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMOTExpiry;
         private System.Windows.Forms.Label lblResultMake;
         private System.Windows.Forms.Label lblResultColour;
         private System.Windows.Forms.Label lblResultTaxStatus;
         private System.Windows.Forms.Label lblMOTExpiryDate;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblEngineSize;
+        private System.Windows.Forms.Label lblResultEngineSize;
     }
 }
 
