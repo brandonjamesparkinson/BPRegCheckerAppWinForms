@@ -26,7 +26,7 @@ namespace BPRegCheckerApp
             var client = new RestClient("https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles");
             var request = new RestRequest(Method.POST);
 
-            request.AddHeader("x-api-key", "enter api key here");
+            request.AddHeader("x-api-key", "api key here");
             request.AddHeader("Content-Type", "application/json");
             request.AddParameter("application/json", $"{{\n\t\"registrationNumber\":\"{txtInputtedReg.Text}\"\n}}", ParameterType.RequestBody);
 
@@ -44,7 +44,12 @@ namespace BPRegCheckerApp
             lblResultColour.Text = car.colour;
             lblResultTaxStatus.Text = car.taxStatus;
             lblMOTExpiryDate.Text = car.motExpiryDate;
-            lblResultEngineSize.Text = car.engineCapacity.ToString();
+
+            int engineCapacity = (car.engineCapacity / 10) * 10 + 10;
+            int firstDigit = (int)(engineCapacity.ToString()[0]) - 48;
+            int secondDigit = (int)(engineCapacity.ToString()[1]) - 48;
+
+            lblResultEngineSize.Text = firstDigit.ToString() + "." + secondDigit.ToString();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
